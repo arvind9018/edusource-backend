@@ -1,0 +1,16 @@
+{
+  "name": "razorpay-api",
+  "version": "1.0.0",
+  "main": "razorpay.js",
+  "scripts": {
+    "start": "node razorpay.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "firebase-admin": "^13.4.0",
+    "razorpay": "^2.9.6"
+  }
+}
