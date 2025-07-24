@@ -64,7 +64,7 @@ module.exports = async (req, res) => {
     // Set CORS headers for all responses (important for local development and specific origins)
     // For production, replace 'http://localhost:3000' with your actual frontend domain
     // Or, for broader access (less secure for sensitive APIs), use '*'
-    res.setHeader('Access-Control-Allow-Origin', 'https://edusource-e-learning.vercel.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://edusource-6em4.vercel.app/');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Authorization for Bearer token
     res.setHeader('Access-Control-Allow-Credentials', 'true'); // If you are sending cookies/auth headers
