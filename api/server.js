@@ -4,8 +4,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-// IMPORTANT: For node-fetch v3+ when using CommonJS (require), you need to import the .default
-const fetch = require('node-fetch').default; // Required for making API calls to Gemini
+// IMPORTANT: Use dynamic import for node-fetch v3+
+let fetch; // Declare fetch here
+
 require('dotenv').config(); // Required for loading environment variables like GEMINI_API_KEY
 
 const app = express();
@@ -41,6 +42,11 @@ app.all('/api/razorpay', async (req, res) => {
 app.post('/chat', async (req, res) => {
     console.log("Received chat request from frontend.");
     try {
+        // Dynamically import node-fetch if it hasn't been imported yet
+        if (!fetch) {
+            fetch = (await import('node-fetch')).default;
+        }
+
         const userMessages = req.body.messages; // Expecting an array of messages from the frontend
         const API_KEY = process.env.GEMINI_API_KEY; // Get API key from environment variables (securely)
         const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
