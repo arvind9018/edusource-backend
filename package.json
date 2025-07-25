@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "razorpay.js",
   "scripts": {
-    "start": "node razorpay.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
