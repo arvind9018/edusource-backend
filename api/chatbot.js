@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3001; // Server will run on port 3001 by defaul
 // --- Middleware ---
 // Enable CORS for your frontend domain
 app.use(cors({
-    origin: 'https://edusource.vercel.app/', // Allow requests ONLY from your React app's origin
+    origin: 'https://edusource.vercel.app', // Allow requests ONLY from your React app's origin
     credentials: true, // Allow cookies/auth headers if sent
     methods: ['GET', 'POST', 'OPTIONS'], // Allow these HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
