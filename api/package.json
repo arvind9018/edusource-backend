@@ -1,0 +1,22 @@
+{
+  "name": "razorpay-api",
+  "version": "1.0.0",
+  "main": "razorpay.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^4.21.2",
+    "firebase-admin": "^11.11.0",
+    "node-fetch": "^3.3.2",
+    "razorpay": "^2.9.6"
+  },
+  "devDependencies": {},
+  "description": ""
+}
