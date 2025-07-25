@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // Configure CORS for your frontend domain
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests ONLY from your React app's origin
+    origin: 'https://edusource.vercel.app/', // Allow requests ONLY from your React app's origin
     credentials: true, // Allow cookies/auth headers if sent
     methods: ['GET', 'POST', 'OPTIONS'], // Allow these HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
